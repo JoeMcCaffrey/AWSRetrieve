@@ -3,6 +3,9 @@
 	"AccessKey":"AKIAJ56AC2YCNOR7KODA",
 	"SecretKey":"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",
 	"region":"us-west-2",
-	"tag":"Owner"
+	"tag":"Owner",
+	"field1":"id",
+	"field2":"instance_type",
+	"field3":"launch_time"
 
 }

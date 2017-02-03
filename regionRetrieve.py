@@ -23,20 +23,22 @@ def getSortInstances(region, tag):
 
     owners.sort(key=lambda x:x.tags[tag])
     mergedOwners = owners + nonOwners
+    ids= 'id'
+    print(mergedOwners[0].id)
     return mergedOwners
 
 
-def printOut(ownersList, tag):
+def printOut(ownersList, field1, tag, field2, field3):
 
-    print("instance id | %s | instance type | launch time" % tag)
+    print("%10s|%10s|%10s|%10s" % (field1, tag, field2, field3))
     
     for owner in ownersList:
         if tag in owner.tags:
-            print("%s %s %s %s" % (owner.id, owner.tags[tag], \
-                owner.instance_type, owner.launch_time))
+            print("%10s %10s %10s %10s" % (owner[field1], owner.tags[tag], \
+                owner[field2], owner[field3]))
         else:
-            print("%s %s %s %s" % (owner.id, 'unknown', owner.instance_type, \
-                owner.launch_time))
+            print("%10s %10s %10s %10s" % (owner[field1], 'unknown', owner.field2, \
+                owner.field3))
 
 
 with open('data.json') as data_file:
@@ -44,4 +46,4 @@ with open('data.json') as data_file:
 
 sortedTags = getSortInstances(data["region"], data["tag"])
 
-printOut(sortedTags, data["tag"])
+printOut(sortedTags, data["field1"],data["tag"],data["field2"], data["field3"])
