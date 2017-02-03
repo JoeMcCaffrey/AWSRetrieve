@@ -1,5 +1,5 @@
-instance id | Owner | instance type | launch time
-i-00007089efb1c5551 Jim t2.nano 2016-06-22T01:02:28.000Z
-i-0bfc55c0abba070bd Mark t2.nano 2016-06-22T01:02:28.000Z
-i-0815cf4ac3811ef04 unknown t2.nano 2016-06-22T01:02:28.000Z
-i-0cb0e38cdd63d9692 unknown t2.nano 2016-06-22T01:02:28.000Z
+ID                 |Owner  |Instance Type|Launch Time 
+i-00007089efb1c5551|Jim    |t2.nano      |2016-06-22T01:02:28.000Z
+i-0bfc55c0abba070bd|Mark   |t2.nano      |2016-06-22T01:02:28.000Z
+i-0815cf4ac3811ef04|unknown|t2.nano      |2016-06-22T01:02:28.000Z
+i-0cb0e38cdd63d9692|unknown|t2.nano      |2016-06-22T01:02:28.000Z
