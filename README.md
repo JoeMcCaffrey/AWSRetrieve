@@ -14,8 +14,9 @@ Developed with Python version 2.7.12 on Fedora 25 x86
 
 This script takes 1 command line argument which is a .json file.
 
-The .json file should have the secret key, access key, ec2 region and 
-tag.
+The .json file should have the secret key, access key, ec2 region, tag, field1, field2, and field3.
+
+The field1..3 can be changed to output diffrent meta data.
 
 ## Description
 
@@ -31,5 +32,5 @@ another tag.
 To parse multiple tags, create an array of tags inside of the .json file
 and add a loop to the function getSortInstances function multiple times.
 
-To output more meta data about the instance, change the printOut function to index the instance.
+To output more meta data about the instance, change the printOut function to index the instance and change the .json file to output diffrent fields
 

@@ -33,21 +33,22 @@ def getSortInstances(region, tag):
     return mergedOwners
 
 #change this function to print out more data about instance
-def printOut(ownersList, tag):
+def printOut(ownersList, tag, field1, field2, field3):
     
     # print out table header
     template = "{0:19}|{1:7}|{2:13}|{3:12}"
-    print(template.format('ID', tag, 'Instance Type', 'Launch Time'))
+    print(template.format(field1, tag,\
+        field2, field3))
 
     for owner in ownersList:
        # print out the sorted list then unknows list
-
         if tag in owner.tags:
-            print(template.format(owner.id, owner.tags[tag], \
-                    owner.instance_type, owner.launch_time))
+            print(template.format(owner.__dict__[field1], \
+            owner.tags[tag], owner.__dict__[field2], \
+            owner.__dict__[field3]))
         else:
-            print(template.format(owner.id, 'unknown', \
-                    owner.instance_type, owner.launch_time))
+            print(template.format(owner.__dict__[field1], 'unknown', \
+                    owner.__dict__[field2], owner.__dict__[field3]))
 
 # open json file with script data as command line argument
 # so we can use this script with diffrent data
@@ -60,7 +61,8 @@ with open(sys.argv[1]) as data_file:
     data = json.load(data_file)
 
 # call to sort instances by tag
-sortedTags = getSortInstances(data["region"], data["tag"])
+sortedTags = getSortInstances(data["region"], data["tag"])  
 
 # print out results seperate from get and sort function
-printOut(sortedTags, data["tag"])
+printOut(sortedTags, data["tag"], \
+    data["field1"], data["field2"], data["field3"])
