@@ -14,12 +14,13 @@ Developed with Python version 2.7.12 on Fedora 25 x86
 
 This script takes 1 command line argument which is a .json file.
 
+Ex. ./regionRetrieve.py data.json
+
 The .json file should have the secret key, access key, ec2 region, tag, field1, field2, and field3.
 
-Inside the json file:
-The tag can be changed to output a diffrent matching tag.
+The tag value can be changed inside the .json file to output a diffrent matching tag.
 
-The field1..3 can be changed to output diffrent meta data.
+The field1..3 values can be changed inside the .json to output diffrent meta data.
 
 ## Description
 
@@ -28,6 +29,8 @@ This function retrieves all the instances in that region and appends the instanc
 The matching tag list is sorted by tag and the two list are concatenated into one.
 
 The printOut function is called to print out the instance data into a table.
+
+The script errors if the command line argument is missing.
 
 To change the tag that the script looks for, change the .json file with 
 another tag.
