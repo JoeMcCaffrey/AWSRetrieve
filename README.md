@@ -3,6 +3,13 @@ Using your favorite high-level language (Python, Ruby, Perl, or compiled), creat
 
 Design the script so it could be used later to find tags with other names and output additional instance information by request.
 
+## Dependencies 
+
+This python script uses the boto library to access amazon EC2
+
+Developed with Python version 2.7.12 on Fedora 25 x86
+
+
 ## Instructions
 
 This script takes 1 command line argument which is a .json file.
@@ -10,11 +17,11 @@ This script takes 1 command line argument which is a .json file.
 The .json file should have the secret key, access key, ec2 region and 
 tag.
 
-### Description
+## Description
 
 The script will open the .json file and call the getSortInstances function to connect to the ec2 region. 
 This function retrieves all the instances in that region and appends the instances with the matching tag into one list and non matching instances into another list. 
-The matching tag list is sorted by tag and the two list are concatinated into one.
+The matching tag list is sorted by tag and the two list are concatenated into one.
 
 The printOut function is called to print out the instance data into a table.
 
@@ -24,5 +31,5 @@ another tag.
 To parse multiple tags, create an array of tags inside of the .json file
 and add a loop to the function getSortInstances function multiple times.
 
-To output more metadata about the instance, change the printOut function to index the instance.
+To output more meta data about the instance, change the printOut function to index the instance.
 

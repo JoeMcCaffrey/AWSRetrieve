@@ -38,18 +38,16 @@ def printOut(ownersList, tag):
     # print out table header
     template = "{0:19}|{1:7}|{2:13}|{3:12}"
     print(template.format('ID', tag, 'Instance Type', 'Launch Time'))
-    #print("%10s%20s%20s%20s" % ('ID', tag, 'Instance Type', 'Launch Time '))
-    
+
     for owner in ownersList:
-    # print out the sorted list then unknows list
+       # print out the sorted list then unknows list
+
         if tag in owner.tags:
             print(template.format(owner.id, owner.tags[tag], \
-                owner.instance_type, owner.launch_time))
-             
-
+                    owner.instance_type, owner.launch_time))
         else:
             print(template.format(owner.id, 'unknown', \
-                owner.instance_type, owner.launch_time))
+                    owner.instance_type, owner.launch_time))
 
 # open json file with script data as command line argument
 # so we can use this script with diffrent data
