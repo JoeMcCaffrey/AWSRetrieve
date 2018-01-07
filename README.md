@@ -1,4 +1,4 @@
-# Sonos Interview
+# AWS Retrieve Challenge
 Using your favorite high-level language (Python, Ruby, Perl, or compiled), create a tool which uses AWS API access to list all EC2 instances in any single region, sorted by the value of a tag each instance has called ‘Owner’.  The script should display the results in an easy to read format which includes the instance id, tag value, instance type and launch time.  The script should work for any number of instances, and should display any instances without an Owner tag as type 'unknown' with the instance id, type and launch time.  
 
 Design the script so it could be used later to find tags with other names and output additional instance information by request.
